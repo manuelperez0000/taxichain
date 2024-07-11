@@ -1,33 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+
+const irons=['0x460A252B4fEEFA821d3351731220627D7B7d1F3d', '0x460A252B4fEEFA821d3351731220627D7B7d1F3d', '0x460A252B4fEEFA821d3351731220627D7B7d1F3d', '0x460A252B4fEEFA821d3351731220627D7B7d1F3d']
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="mine-container">
+      <main>
+        <h1>Taxichain Iron Miner</h1>
+        <div className="second">
+        <h2>Halving:000</h2>
+        <h3>Last decoded block: 0x0x</h3>
+        </div> 
+      </main>
+      <h3>Irons Mined</h3>
+      <div className="container">
+        {irons.map((iron, i)=>{
+          return <div className="cards" key={i}>{iron}</div>})}
+        
+               
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    </div>
     </>
   )
 }
