@@ -1,36 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+*{
+  box-sizing: border-box;
+}
+
 :root{
   --background: rgb(234, 195, 30);;
   --black: rgb(30,30,40);
   --background-content: rgb(255, 246, 33)
 }
 
-.mine-container{
-  position: absolute;
-  left:25%;
-  width: 600px;
-}
-
 body{
-position: relative;
-font-family: "Oswald", sans-serif;
-background: var(--background);
-color: var(--black);
-text-align: center;
-padding: 20px;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Oswald", sans-serif;
+  background: var(--background);
+  color: var(--black);
+  text-align: center;
 }
 
-.container{
+.mine-container{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+
 }
 
-.container .cards {
-  border: solid 5px var(--black);
+.clontainer{
+  max-width: 600px;
+  width: 80%;
+}
+
+.cards{
+  border: solid 3px var(--black);
+  padding: 5px 15px;
   border-radius: 5px;
   background-color: var(--background-content);
-  margin: 5px;
+  margin-bottom: 5px;
 }
 
 .second{
@@ -38,3 +43,13 @@ padding: 20px;
   border-radius: 5px;
   background-color: var(--background-content);
 }
+
+@media (max-width: 363px){
+  .second, .cards{
+    font-size: smaller;
+    overflow: auto;
+  }
+}
+
+
+
